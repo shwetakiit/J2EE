@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+	<display-name>ServletContextDemo</display-name>
+	<welcome-file-list>
+		<!-- just commenting this index.html to create servlet for Submitting form -->
+		<!-- <welcome-file>index.html</welcome-file> -->
+		<!-- <welcome-file>candidateform.html</welcome-file> -->
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+
+	<servlet>
+		<servlet-name>myservlet</servlet-name>
+		<servlet-class>kumari.shweta.ServletDemo</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>first</servlet-name>
+		<servlet-class>kumari.shweta.MyServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>second</servlet-name>
+		<servlet-class>kumari.shweta.ServletUsingGenericServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>userhttpservlet</servlet-name>
+		<servlet-class>kumari.shweta.UserServletUsingHttpServllet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>candidateform</servlet-name>
+		<servlet-class>kumari.shweta.RegisterServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>successservlet</servlet-name>
+		<servlet-class>kumari.shweta.SuccessServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>cookiess1</servlet-name>
+		<servlet-class>kumari.shweta.CookiesServlet1</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>cookiess2</servlet-name>
+		<servlet-class>kumari.shweta.CookiesServlet2</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>myservlet</servlet-name>
+		<url-pattern>/myser</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>first</servlet-name>
+		<url-pattern>/web</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>second</servlet-name>
+		<url-pattern>/generic</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>userhttpservlet</servlet-name>
+		<url-pattern>/servletwithhttp</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>candidateform</servlet-name>
+		<url-pattern>/RegisterServlet</url-pattern> <!-- candidateform action name -->
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>successservlet</servlet-name>
+		<url-pattern>/successregistration</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>cookiess1</servlet-name>
+		<url-pattern>/cookiesservlet1</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>cookiess2</servlet-name>
+		<url-pattern>/cookiesservlet2</url-pattern>
+	</servlet-mapping>
+
+	<context-param>
+		<param-name>password</param-name>
+		<param-value>oracle</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>username</param-name>
+		<param-value>system</param-value>
+	</context-param>
+
+
+	<context-param>
+		<param-name>dname</param-name>
+		<param-value>sun.jdbc.odbc.JdbcOdbcDriver</param-value>
+	</context-param>
+</web-app>
