@@ -50,7 +50,17 @@
 		<servlet-name>cookiess2</servlet-name>
 		<servlet-class>kumari.shweta.CookiesServlet2</servlet-class>
 	</servlet>
-
+	
+	<servlet>
+	<servlet-name>urlservlet1</servlet-name>
+	<servlet-class>kumari.shweta.URLServlet1</servlet-class>
+	</servlet>
+ 
+    <servlet>
+    <servlet-name>urlservlet2</servlet-name>
+    <servlet-class>kumari.shweta.URLServlet2</servlet-class>
+    </servlet>
+    
 	<servlet-mapping>
 		<servlet-name>myservlet</servlet-name>
 		<url-pattern>/myser</url-pattern>
@@ -89,6 +99,16 @@
 	<servlet-mapping>
 		<servlet-name>cookiess2</servlet-name>
 		<url-pattern>/cookiesservlet2</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>urlservlet1</servlet-name>
+		<url-pattern>/urls1</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>urlservlet2</servlet-name>
+		<url-pattern>/urls2</url-pattern>
 	</servlet-mapping>
 
 	<context-param>
