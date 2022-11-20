@@ -121,9 +121,40 @@
 		<param-value>system</param-value>
 	</context-param>
 
-
 	<context-param>
 		<param-name>dname</param-name>
 		<param-value>sun.jdbc.odbc.JdbcOdbcDriver</param-value>
 	</context-param>
+	
+	<!-- Filter  -->
+	<servlet>
+	<servlet-name>profileservlet</servlet-name>
+	<servlet-class>kumari.shweta.ProfileServlet</servlet-class>
+</servlet>
+
+	<servlet-mapping>
+		<servlet-name>profileservlet</servlet-name>
+		<url-pattern>/profileservlet</url-pattern>
+	</servlet-mapping>
+
+	<filter>
+		<filter-name>filter1</filter-name>
+		<filter-class>kumari.shweta.MyFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>filter1</filter-name>
+		<url-pattern>/profileservlet</url-pattern>  <!-- Url pattern of Servlet url pattern /* Filter execute for all servlet -->
+	</filter-mapping>
+
+	<filter>
+		<filter-name>passwordfilter</filter-name>
+		<filter-class>kumari.shweta.PasswordValidationFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>passwordfilter</filter-name>
+		<url-pattern>/RegisterServlet</url-pattern>
+	</filter-mapping>
+    
 </web-app>
